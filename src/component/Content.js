@@ -8,7 +8,7 @@ import Skill from "./Skill";
 const Content = () => {
   return (
     <div className="content-container">
-      <About/>
+      <About />
       <Experience />
       <Education />
       <Skill />

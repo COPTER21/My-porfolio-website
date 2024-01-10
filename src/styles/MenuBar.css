@@ -1,5 +1,36 @@
-/* header {
-  background-color: red;
+.menu-container {
   position: fixed;
   height: 100%;
+  width: fit-content;
+  background-color: red;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+/* header {
+  border: 1px solid blue;
+  height: fit-content;
 } */
+
+header img {
+  width: 9em;
+  border: 8px solid rgb(216, 105, 105);
+  border-radius: 6em;  
+}
+
+
+.menu-bar {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu-bar li {
+  width: fit-content;
+  margin: 2em auto;
+}
+
+.menu-bar li a{
+  text-decoration: none;
+  color: aliceblue;
+}
