@@ -1,8 +1,9 @@
+import React from "react";
 import "../styles/Education.css";
 
 const Education = () => {
   return (
-    <div className="educate-container">
+    <div id='educate' className="educate-container">
       <h2>EDUCATION</h2>
       <div className="educate-item-container">
         <div className="educate-item">

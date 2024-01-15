@@ -1,34 +1,108 @@
+import React from "react";
 import "../styles/MenuBar.css";
 import userPic from "../assets/myPic.jpg";
+import Content from "./Content";
+import { useState } from "react";
+import arrowleft from "../assets/chevrons-left-regular-24.png";
+import arrowright from "../assets/chevrons-right-regular-24.png";
 
 const MenuBar = () => {
+  const [isStyles, setIsStyles] = useState(false);
+  const [isPhotoStyles, setIsPhotoStyles] = useState(false);
+  const [isDropdown, setIsDropdown] = useState(false);
+  const [tabActive, setTabActive] = useState("");
+
+  // --------------function---------------------
+  const toggleStyle = () => {
+    setIsStyles(!isStyles);
+  };
+  const toggleStylePhoto = () => {
+    setIsPhotoStyles(!isPhotoStyles);
+  };
+  const toggleDropdown = () => {
+    setIsDropdown(!isDropdown);
+  };
+  const dropDownChange = () => {
+    return isDropdown ? arrowright : arrowleft;
+  };
+
+  // ---------change style---------
+  const photoStyles = {
+    borderStyle: isPhotoStyles && "dashed inset dashed outset",
+    borderColor: isPhotoStyles && "black",
+  };
+  const showMenu = {
+    visibility: isDropdown && "hidden",
+  };
+  const showArrow = {
+    visibility: "visible",
+    left: isDropdown && "-20rem",
+  };
+
   return (
     <div className="menu-container">
-      <header>
-        <img src={userPic} alt="userImg" />
+      <header style={showMenu}>
+        <img
+          src={userPic}
+          alt="userImg"
+          onClick={toggleStylePhoto}
+          style={photoStyles}
+        />
         <ul className="menu-bar">
           <li>
-            <a href="https://www.w3schools.com/tags/tag_a.asp" target="_self">
+            <a
+              href="#about"
+              target="_self"
+              className={tabActive === "about" ? "active" : ""}
+              onClick={() => setTabActive('about')}
+            >
               ABOUT
             </a>
           </li>
           <li>
-            <a href="https://www.w3schools.com/tags/tag_a.asp" target="_self">
+            <a
+              href="#exp"
+              target="_self"
+              className={tabActive === "exp" ? "active" : ""}
+              onClick={() => setTabActive('exp')}
+            >
               EXPERIENCE
             </a>
           </li>
           <li>
-            <a href="https://www.w3schools.com/tags/tag_a.asp" target="_self">
+            <a
+              href="#educate"
+              target="_self"
+              className={tabActive === "educate" ? "active" : ""}
+              onClick={() => setTabActive('educate')}
+            >
               EDUCATION
             </a>
           </li>
           <li>
-            <a href="https://www.w3schools.com/tags/tag_a.asp" target="_self">
+            <a
+              href="#skill"
+              target="_self"
+              className={tabActive === "skill" ? "active" : ""}
+              onClick={() => setTabActive('skill')}
+            >
               SKILLS
             </a>
           </li>
+          <li
+            onClick={toggleStyle}
+            className={tabActive === "mode" ? "active" : ""}
+
+          >
+            <span>SET MODE</span>
+          </li>
         </ul>
+        <div className="arrowside" onClick={toggleDropdown} style={showArrow}>
+          <img src={dropDownChange()} alt="arrow-left" />
+          {/* <img src={arrowright} alt="arrow-right" /> */}
+        </div>
       </header>
+      <Content isStyles={isStyles} isDropdown={isDropdown} />
     </div>
   );
 };

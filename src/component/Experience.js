@@ -1,8 +1,9 @@
+import React from "react";
 import "../styles/Experience.css";
 
 const Experience = () => {
   return (
-    <div className="exp-container">
+    <div id='exp' className="exp-container">
       <h2>Experience</h2>
       <div className="exp-item-container">
         <div className="up-item-container">

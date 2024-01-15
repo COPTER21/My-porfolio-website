@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/About.css";
 import facebook from "../assets/facebook-circle-logo-24.png";
 import twit from "../assets/twitter-logo-24.png";
@@ -6,7 +7,7 @@ import github from "../assets/github-logo-24.png";
 
 const About = () => {
   return (
-    <div className="about-section">
+    <div id="about" className="about-section">
       <h1>
         KANT <span className="surename">SAIBEAUTONG</span>
       </h1>
@@ -36,11 +37,7 @@ const About = () => {
         >
           <img src={twit} alt="social2" />
         </a>
-        <a 
-          href="https://github.com/COPTER21" 
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://github.com/COPTER21" target="_blank" rel="noreferrer">
           <img src={github} alt="social3" />
         </a>
       </div>

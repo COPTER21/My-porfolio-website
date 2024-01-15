@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/Skill.css";
 import html from "../assets/html5-logo-24.png";
 import css from "../assets/css3-logo-24.png";
@@ -8,7 +9,7 @@ import github from "../assets/github-logo-24.png";
 
 const Skill = () => {
   return (
-    <div className="skill-container">
+    <div id='skill' className="skill-container">
       <h2>SKILLS</h2>
       <span className="program-text">PROGRAMMING LANGUAGES & TOOLS</span>
       <div className="skill-img-container">

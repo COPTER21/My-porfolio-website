@@ -1,4 +1,4 @@
-.menu-container {
+header {
   text-align: center;
   position: fixed;
   top: 0;
@@ -13,21 +13,16 @@
   justify-content: center;
   padding: 0.5rem 1rem;
   z-index: 1030;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border-right: 3px solid black;
 }
-
-/* header {
-  border: 1px solid blue;
-  height: fit-content;
-} */
 
 header img {
   width: 9em;
   border: 8px solid rgb(216, 105, 105);
-  border-radius: 6em;  
+  border-radius: 6em;
+  transition: border-style 2s, border-color 0.5s;
 }
-
 
 .menu-bar {
   list-style: none;
@@ -39,7 +34,42 @@ header img {
   margin: 2em auto;
 }
 
-.menu-bar li a{
+.menu-bar li a,
+.menu-bar li span {
   text-decoration: none;
   color: aliceblue;
+  cursor: pointer;
+  transition: color 0.5s;
+
+}
+
+.arrowside {
+  position: absolute;
+  right: -2.8rem;
+}
+
+.arrowside img {
+  width: 2.5rem;
+  padding: 4rem 0;
+  border: 3px solid black;
+  border-left: none;
+  border-radius: 0;
+  background-color: red;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+/* ----------interactive css------------------- */
+
+.menu-bar li a:hover,
+.menu-bar li span:hover {
+  color: rgb(248, 186, 71);
+}
+
+.menu-bar li .active {
+  color: black;
+}
+
+.arrowside img:hover {
+  background-color: rgb(255, 146, 146);
 }
