@@ -5,12 +5,14 @@ import Content from "./Content";
 import { useState } from "react";
 import arrowleft from "../assets/chevrons-left-regular-24.png";
 import arrowright from "../assets/chevrons-right-regular-24.png";
+import minimenu from "../assets/menu-regular-24.png";
 
 const MenuBar = () => {
   const [isStyles, setIsStyles] = useState(false);
   const [isPhotoStyles, setIsPhotoStyles] = useState(false);
   const [isDropdown, setIsDropdown] = useState(false);
   const [tabActive, setTabActive] = useState("");
+  const [miniMenu, setMiniMenu] = useState (false);
 
   // --------------function---------------------
   const toggleStyle = () => {
@@ -25,6 +27,9 @@ const MenuBar = () => {
   const dropDownChange = () => {
     return isDropdown ? arrowright : arrowleft;
   };
+  const miniMenuToggle = () => {
+    setMiniMenu(!miniMenu);
+  }
 
   // ---------change style---------
   const photoStyles = {
@@ -38,23 +43,34 @@ const MenuBar = () => {
     visibility: "visible",
     left: isDropdown && "-20rem",
   };
+  const showMiniMenu = {
+    opacity: miniMenu && 1,
+    height: miniMenu && 'fit-content',
+  }
 
   return (
     <div className="menu-container">
       <header style={showMenu}>
-        <img
-          src={userPic}
-          alt="userImg"
-          onClick={toggleStylePhoto}
-          style={photoStyles}
-        />
-        <ul className="menu-bar">
+        <div className="response">
+          <img
+            src={userPic}
+            alt="userImg"
+            onClick={toggleStylePhoto}
+            style={photoStyles}
+            className="myimg"
+          />
+          <div className="response-menu">
+            <span className="response-text">My Portfolio Website</span>
+            <img src={minimenu} alt="mini-menu" className="mini-icon" onClick={miniMenuToggle} />
+          </div>
+        </div>
+        <ul className="menu-bar" style={showMiniMenu}>
           <li>
             <a
               href="#about"
               target="_self"
               className={tabActive === "about" ? "active" : ""}
-              onClick={() => setTabActive('about')}
+              onClick={() => setTabActive("about")}
             >
               ABOUT
             </a>
@@ -64,7 +80,7 @@ const MenuBar = () => {
               href="#exp"
               target="_self"
               className={tabActive === "exp" ? "active" : ""}
-              onClick={() => setTabActive('exp')}
+              onClick={() => setTabActive("exp")}
             >
               EXPERIENCE
             </a>
@@ -74,7 +90,7 @@ const MenuBar = () => {
               href="#educate"
               target="_self"
               className={tabActive === "educate" ? "active" : ""}
-              onClick={() => setTabActive('educate')}
+              onClick={() => setTabActive("educate")}
             >
               EDUCATION
             </a>
@@ -84,7 +100,7 @@ const MenuBar = () => {
               href="#skill"
               target="_self"
               className={tabActive === "skill" ? "active" : ""}
-              onClick={() => setTabActive('skill')}
+              onClick={() => setTabActive("skill")}
             >
               SKILLS
             </a>
@@ -92,7 +108,6 @@ const MenuBar = () => {
           <li
             onClick={toggleStyle}
             className={tabActive === "mode" ? "active" : ""}
-
           >
             <span>SET MODE</span>
           </li>

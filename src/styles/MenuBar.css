@@ -15,13 +15,30 @@ header {
   z-index: 1030;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   border-right: 3px solid black;
+
 }
 
-header img {
+.myimg {
   width: 9em;
   border: 8px solid rgb(216, 105, 105);
   border-radius: 6em;
   transition: border-style 2s, border-color 0.5s;
+}
+
+.response-menu {
+  display: none;
+}
+
+.response-text {
+  font-size: 1.3rem;
+  color: black;
+}
+
+.mini-icon {
+  width: 2.3rem;
+  padding: 0.2rem 1rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
 }
 
 .menu-bar {
@@ -40,7 +57,6 @@ header img {
   color: aliceblue;
   cursor: pointer;
   transition: color 0.5s;
-
 }
 
 .arrowside {
@@ -73,3 +89,52 @@ header img {
 .arrowside img:hover {
   background-color: rgb(255, 146, 146);
 }
+
+/* --------------responsive--------------- */
+
+@media only screen and (max-width: 1023px) {
+  header {
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0;
+    padding-bottom: 0rem;
+  }
+
+  .myimg {
+    display: none;
+  }
+
+  .response-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 96vw;
+  }
+
+  .menu-bar {
+    width: 100%;
+    display: flex;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    transition: opacity 0.5s ease-in ;
+  }
+
+  .menu-bar,
+  .arrowside {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+
+  }
+
+}
+
+@media only screen and (max-width: 610px) {
+
+  .menu-bar {
+    display: block;
+  }
+}
+
+

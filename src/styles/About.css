@@ -6,7 +6,6 @@
   height: 100vh;
   /* border: 1px solid blue; */
   border-bottom: 1px solid black;
-
 }
 
 h1 {
@@ -41,4 +40,31 @@ h1 {
   border: 15px solid rgb(171, 171, 171);
   border-radius: 2rem;
   margin-right: 1rem;
+}
+
+/* --------------responsive--------------- */
+
+@media only screen and (max-width: 610px) {
+  .about-section {
+    height: fit-content;
+    padding: 10rem 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .surename {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 364px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .surename {
+    font-size: 2rem;
+  }
 }

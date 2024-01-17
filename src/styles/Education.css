@@ -42,4 +42,28 @@
   font-size: 1rem;
 }
 
+/* ----------resposive-------------- */
 
+@media only screen and (max-width: 610px) {
+  .educate-container {
+    height: fit-content;
+    padding: 10rem 0;
+  }
+
+  .edu-up-item {
+    flex-direction: column;
+    height: 4rem;
+  }
+
+  
+}
+
+@media only screen and (max-width: 377px) {
+  .institution {
+    font-size: 1rem;
+  }
+
+  .educational-institution {
+    font-size: 1rem;
+  }
+}

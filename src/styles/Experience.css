@@ -44,3 +44,33 @@ h2 {
 .exp-descripe {
   font-size: 1rem ;
 }
+
+/* --------------responsive--------------- */
+
+@media only screen and (max-width: 610px) {
+  .exp-container {
+    height: fit-content;
+    padding: 10rem 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .position {
+    font-size: 1.2rem;
+  }
+
+  .period {
+    font-size: 1.2rem;
+  }
+
+  .cooperations {
+    font-size: 1rem;
+  }
+
+  .upper-section {
+    flex-direction: column;
+    height: 3rem;
+  }
+}
