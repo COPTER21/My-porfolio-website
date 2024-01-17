@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # My-porfolio-website
 =======
 # Getting Started with Create React App
