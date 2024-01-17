@@ -1,0 +1,70 @@
+.about-section {
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  /* border: 1px solid blue; */
+  border-bottom: 1px solid black;
+}
+
+h1 {
+  color: black;
+  font-size: 4em;
+  margin-bottom: 0;
+}
+
+.surename {
+  color: red;
+}
+
+.communicate-address {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.email {
+  color: red;
+  font-weight: bold;
+}
+
+.explain-myself {
+  font-size: 1em;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.social-call a img {
+  width: 1.5rem;
+  border: 15px solid rgb(171, 171, 171);
+  border-radius: 2rem;
+  margin-right: 1rem;
+}
+
+/* --------------responsive--------------- */
+
+@media only screen and (max-width: 610px) {
+  .about-section {
+    height: fit-content;
+    padding: 10rem 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .surename {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 364px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .surename {
+    font-size: 2rem;
+  }
+}

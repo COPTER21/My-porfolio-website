@@ -1,0 +1,27 @@
+.content-container {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding-left: 25rem;
+  padding-right: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+/* --------------responsive--------------- */
+
+@media only screen and (max-width: 1023px) {
+  .content-container {
+    padding: 0 5rem 0 5rem;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  * {
+    font-size: 0.8rem;
+  }
+}
+
+
+
