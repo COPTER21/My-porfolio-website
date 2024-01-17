@@ -1,0 +1,28 @@
+.skill-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.program-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.skill-img-container img{
+  width: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+/* ----------resposive-------------- */
+
+@media only screen and (max-width: 610px) {
+  .skill-container {
+    height: fit-content;
+    padding: 10rem 0;
+  }
+}
